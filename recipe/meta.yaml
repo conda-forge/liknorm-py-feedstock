@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.0.3" %}
-{% set sha256 = "da072f7eba82741d47024d690b63ae85a9528f79e6b097210a2d64556907103a" %}
+{% set version = "1.0.4" %}
+{% set sha256 = "6c7454265f8bc800882836aeb1d8a18a1cc4fd7bf295269e5ee21b2904dc5b10" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: true  # [win32 or (win and not py35)]
+  number: 0
+  skip: true  # [win32 or (win and py<35)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
