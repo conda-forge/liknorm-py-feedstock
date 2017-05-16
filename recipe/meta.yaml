@@ -20,12 +20,12 @@ requirements:
   build:
     - python
     - setuptools
-    - cffi >=1.7
+    - cffi >=1.8
     - toolchain
     - liknorm >=1.2.6
   run:
     - python
-    - cffi >=1.7
+    - cffi >=1.8
     - liknorm >=1.2.6
     - numpy >=1.10
 
