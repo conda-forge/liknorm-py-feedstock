@@ -34,6 +34,7 @@ test:
   imports:
     - liknorm
   commands:
+    - if not exist %LIBRARY_LIB%\\liknorm.dll exit 1         # [win]
     - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
 
 about:
