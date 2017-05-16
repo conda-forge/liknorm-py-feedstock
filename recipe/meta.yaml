@@ -19,6 +19,7 @@ build:
 requirements:
   build:
     - python
+    - conda-build
     - setuptools
     - cffi >=1.7
     - toolchain
@@ -31,8 +32,9 @@ requirements:
 
 test:
   requires:
+    - python  # [win]
     - pytest >=3
-    - liknorm >=1.2.6
+    - liknorm >=1.2.6  # [win]
   imports:
     - liknorm
   commands:
