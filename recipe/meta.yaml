@@ -32,6 +32,7 @@ requirements:
 test:
   requires:
     - pytest >=3
+    - liknorm >=1.2.6
   imports:
     - liknorm
   commands:
