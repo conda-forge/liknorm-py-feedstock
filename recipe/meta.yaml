@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: liknorm-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/liknorm/liknorm-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
