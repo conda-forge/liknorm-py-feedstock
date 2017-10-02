@@ -69,6 +69,8 @@ install:
 build: off
 
 test_script:
+    - python -c "import cffi; ffi = cffi.FFI(); print(ffi.sizeof('double'))"
+    - python -c "import cffi; ffi = cffi.FFI(); print(ffi.alignof('double'))"
     - conda build recipe --quiet
 deploy_script:
     - cmd: upload_or_check_non_existence .\recipe conda-forge --channel=main
