@@ -13,7 +13,6 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
@@ -37,6 +36,7 @@ test:
   imports:
     - liknorm
   commands:
+    - if not exist %LIBRARY_BIN%\liknorm.dll exit 1  # [win]
     - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
 
 about:
