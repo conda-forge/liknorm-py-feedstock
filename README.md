@@ -14,14 +14,16 @@ Summary: Liknorm Python wrapper
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/liknorm-py-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/liknorm-py-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/liknorm-py-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/liknorm-py-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/liknorm-py-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/liknorm-py-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/liknorm-py-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/liknorm-py-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/liknorm-py-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/liknorm-py-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/liknorm-py-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/liknorm-py-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/liknorm-py/badges/version.svg)](https://anaconda.org/conda-forge/liknorm-py)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/liknorm-py/badges/downloads.svg)](https://anaconda.org/conda-forge/liknorm-py)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-liknorm--py-green.svg)](https://anaconda.org/conda-forge/liknorm-py) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/liknorm-py.svg)](https://anaconda.org/conda-forge/liknorm-py) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/liknorm-py.svg)](https://anaconda.org/conda-forge/liknorm-py) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/liknorm-py.svg)](https://anaconda.org/conda-forge/liknorm-py) |
 
 Installing liknorm-py
 =====================
