@@ -23,6 +23,7 @@ requirements:
   host:
     - python
     - pip
+    - liknorm >=1.4.1
     - pytest-runner >=4.2
     - cffi >=1.11.5
   run:
