@@ -27,6 +27,7 @@ requirements:
     - cffi >=1.11.5
   run:
     - python
+    - pytest >=3.6.2
     - cffi >=1.11.5
     - liknorm >=1.4.1
     - numpy >=1.14.5
