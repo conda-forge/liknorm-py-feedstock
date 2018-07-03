@@ -9,7 +9,7 @@ IF "%PY_VER%"=="2.7" (
     set LLIB=-lliknorm
 )
 
-"%PYTHON%" setup.py build_ext -I"%LIBRARY_INC%" %LLIB% -L"%LIBRARY_LIB%" ^
+%PYTHON% setup.py build_ext -I"%LIBRARY_INC%" %LLIB% -L"%LIBRARY_LIB%" ^
            install --single-version-externally-managed --record record.txt
 
 copy %PREFIX%\Lib\liknorm.dll %LIBRARY_BIN%

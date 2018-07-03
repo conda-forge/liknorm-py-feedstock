@@ -15,12 +15,13 @@ build:
   number: 0
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
+  build:
+    - {{ compiler('c') }}
     - pytest-runner
     - cffi >=1.8
-    - {{ compiler('c') }}
     - liknorm >=1.4.1
   run:
     - python
