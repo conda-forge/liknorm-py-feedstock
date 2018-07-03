@@ -20,7 +20,7 @@ requirements:
     - setuptools
     - pytest-runner
     - cffi >=1.8
-    - toolchain
+    - {{ compiler('c') }}
     - liknorm >=1.4.1
   run:
     - python
@@ -42,7 +42,7 @@ about:
   license_family: MIT
   license_file: LICENSE.md
   summary: 'Liknorm Python wrapper'
-  doc: https://github.com/limix/liknorm-py
+  doc_url: https://github.com/limix/liknorm-py
   dev_url: https://github.com/limix/liknorm-py
 
 extra:
