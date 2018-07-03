@@ -15,14 +15,14 @@ build:
   number: 0
 
 requirements:
-  host:
-    - python
-    - pip
   build:
     - {{ compiler('c') }}
     - pytest-runner
     - cffi >=1.8
     - liknorm >=1.4.1
+  host:
+    - python
+    - pip
   run:
     - python
     - cffi >=1.8
