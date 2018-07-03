@@ -23,6 +23,7 @@ requirements:
   host:
     - python
     - pip
+    - cffi >=1.11.5
   run:
     - python
     - cffi >=1.11.5
