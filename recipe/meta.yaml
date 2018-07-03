@@ -17,12 +17,13 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - pytest-runner
+    - pytest-runner >=4.2
     - cffi >=1.11.5
     - liknorm >=1.4.1
   host:
     - python
     - pip
+    - pytest-runner >=4.2
     - cffi >=1.11.5
   run:
     - python
