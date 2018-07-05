@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.1.6" %}
-{% set sha256 = "96ff813d59e6bacb1278a2dc7ffb35f3799fa910064428650ad5360c38d7bf74" %}
+{% set version = "1.1.8" %}
+{% set sha256 = "ad5f218a442397825f60c26a392a8f7874e7ef1b3345960c7dd4b3c4f23167f0" %}
 
 package:
   name: {{ name|lower }}
@@ -20,18 +20,18 @@ requirements:
     - {{ compiler('c') }}
     - pytest-runner >=4.2
     - cffi >=1.11.5
-    - liknorm >=1.4.1
+    - liknorm >=1.4.4
   host:
     - python
     - pip
-    - liknorm >=1.4.1
+    - liknorm >=1.4.4
     - pytest-runner >=4.2
     - cffi >=1.11.5
   run:
     - python
     - pytest >=3.6.2
     - cffi >=1.11.5
-    - liknorm >=1.4.1
+    - liknorm >=1.4.4
     - numpy >=1.14.5
 
 test:
