@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [py35 or vc<14]
+  skip: True  # [vc<14]
 
 requirements:
   build:
