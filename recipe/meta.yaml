@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [vc<14]
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
@@ -23,9 +23,7 @@ requirements:
     - liknorm >=1.4.4
   host:
     - python
-    - pip
     - liknorm >=1.4.4
-    - pytest-runner >=4.2
     - cffi >=1.11.5
   run:
     - python
