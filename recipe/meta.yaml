@@ -24,6 +24,7 @@ requirements:
     - setuptools >=39.2.0
   host:
     - python
+    - pytest-runner >=4.2
     - liknorm >=1.4.4
     - cffi >=1.11.5
     - setuptools >=39.2.0
