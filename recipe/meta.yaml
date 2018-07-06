@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.0.12" %}
-{% set sha256 = "db513d5c19dd0d6be2d086761d95a0210024007de00fb8b658c9186bfc4b8011" %}
+{% set version = "1.1.8" %}
+{% set sha256 = "ad5f218a442397825f60c26a392a8f7874e7ef1b3345960c7dd4b3c4f23167f0" %}
 
 package:
   name: {{ name|lower }}
@@ -13,26 +13,30 @@ source:
 
 build:
   number: 0
+  skip: True  # [vc<14]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - pytest-runner >=4.2
+    - cffi >=1.11.5
+    - liknorm >=1.4.4
+  host:
     - python
-    - setuptools
-    - pytest-runner
-    - cffi >=1.8
-    - toolchain
-    - liknorm >=1.3.11
+    - pip
+    - liknorm >=1.4.4
+    - pytest-runner >=4.2
+    - cffi >=1.11.5
   run:
     - python
-    - cffi >=1.8
-    - liknorm >=1.3.11
-    - numpy >=1.10
+    - pytest >=3.6.2
+    - cffi >=1.11.5
+    - liknorm >=1.4.4
+    - numpy >=1.14.5
 
 test:
   requires:
     - pytest >=3
-    - pytest-pep8
-    - pytest-sugar
   imports:
     - liknorm
   commands:
@@ -42,9 +46,9 @@ about:
   home: https://github.com/limix/liknorm-py
   license: MIT
   license_family: MIT
-  license_file: LICENSE.txt
+  license_file: LICENSE.md
   summary: 'Liknorm Python wrapper'
-  doc: https://github.com/limix/liknorm-py
+  doc_url: https://github.com/limix/liknorm-py
   dev_url: https://github.com/limix/liknorm-py
 
 extra:
