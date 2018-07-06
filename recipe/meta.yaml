@@ -18,10 +18,6 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    # - pytest-runner >=4.2
-    # - cffi >=1.11.5
-    # - liknorm >=1.4.4
-    # - setuptools >=39.2.0
   host:
     - cffi >=1.11.5
     - liknorm >=1.4.4
