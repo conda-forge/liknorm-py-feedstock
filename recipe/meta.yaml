@@ -26,6 +26,7 @@ requirements:
     - python
     - liknorm >=1.4.4
     - cffi >=1.11.5
+    - setuptools >=39.2.0
   run:
     - python
     - pytest >=3.6.2
