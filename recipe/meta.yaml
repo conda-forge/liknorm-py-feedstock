@@ -13,26 +13,24 @@ source:
 
 build:
   number: 0
-  skip: True  # [vc<14]
+  skip: True  # [win and vc<14]
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - pytest-runner >=4.2
-    - cffi >=1.11.5
-    - liknorm >=1.4.4
   host:
-    - python
-    - pip
-    - liknorm >=1.4.4
-    - pytest-runner >=4.2
     - cffi >=1.11.5
-  run:
+    - liknorm >=1.4.4
+    - pip >=10.0.1
+    - pytest-runner >=4.2
     - python
-    - pytest >=3.6.2
+  run:
     - cffi >=1.11.5
     - liknorm >=1.4.4
     - numpy >=1.14.5
+    - pytest >=3.6.2
+    - python
 
 test:
   requires:
