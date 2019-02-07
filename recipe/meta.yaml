@@ -35,7 +35,8 @@ requirements:
 
 test:
   requires:
-    - pytest >=3
+    - pytest
+    - numpy
   imports:
     - liknorm
   commands:
