@@ -18,11 +18,12 @@ build:
 
 requirements:
   build:
-    - {{ compiler('fortran') }}
+    - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('c') }}
   host:
     - cffi
     - liknorm >=1.5.1
+    - openblas
     - pip
     - pytest-runner
     - python
@@ -30,6 +31,7 @@ requirements:
   run:
     - cffi
     - liknorm >=1.5.1
+    - openblas
     - pytest
     - python
     - {{ pin_compatible('numpy') }}
