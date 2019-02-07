@@ -26,6 +26,7 @@ requirements:
     - blas 1.1 {{ variant }}    # [not win]
     - cffi
     - liknorm >=1.5.1
+    - numpy
     - openblas                  # [not win]
     - pip
     - pytest-runner
