@@ -15,13 +15,12 @@ source:
 build:
   number: 1000
   skip: True  # [py27]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
   features:
     - blas_{{ variant }}  # [not win]
 
 requirements:
   build:
-    - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('c') }}
   host:
     - blas 1.1 {{ variant }}    # [not win]
@@ -49,8 +48,8 @@ test:
     - liknorm
     - numpy
   commands:
-    - python -c "import numpy"
-    - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
+    - "{{ PYTHON }} -c 'import numpy'"
+    - "{{ PYTHON }} -c 'import sys; import liknorm; sys.exit(liknorm.test())'"
 
 about:
   home: https://github.com/limix/liknorm-py
