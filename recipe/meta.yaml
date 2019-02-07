@@ -44,8 +44,6 @@ requirements:
 test:
   imports:
     - liknorm
-  commands:
-    - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
 
 about:
   home: https://github.com/limix/liknorm-py
