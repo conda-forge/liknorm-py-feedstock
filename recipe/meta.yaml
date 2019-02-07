@@ -19,17 +19,18 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - numpy
   host:
-    - cffi >=1.11.5
+    - cffi
     - liknorm >=1.5.1
-    - pip >=10.0.1
-    - pytest-runner >=4.2
+    - pip
+    - pytest-runner
     - python
   run:
-    - cffi >=1.11.5
-    - liknorm >=1.5.1
-    - numpy >=1.14.5
-    - pytest >=3.6.2
+    - cffi
+    - liknorm
+    - numpy
+    - pytest
     - python
 
 test:
