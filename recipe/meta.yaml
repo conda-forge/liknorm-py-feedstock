@@ -1,5 +1,4 @@
 {% set name = "liknorm-py" %}
-{% set variant = "openblas" %}
 {% set version = "1.2.2" %}
 {% set sha256 = "6099eb01d394cbdc09af1b5a6b9817074c58341ce7c0cda1074ae5813f574bfc" %}
 
@@ -16,32 +15,26 @@ build:
   number: 1000
   skip: True  # [py27]
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
-  features:
-    - blas_{{ variant }}  # [not win]
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - blas 1.1 {{ variant }}    # [not win]
     - cffi
+    - libgfortran =3  # [not win]
     - liknorm >=1.5.1
-    - numpy >=1.15.4
-    - openblas                  # [not win]
-    - libgfortran =3
+    - numpy
     - pip
     - pytest-runner
     - python
     - setuptools
   run:
-    - blas 1.1 {{ variant }}    # [not win]
     - cffi
+    - libgfortran =3  # [not win]
     - liknorm >=1.5.1
-    - openblas                  # [not win]
+    - numpy
     - pytest
     - python
-    - libgfortran =3
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
