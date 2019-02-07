@@ -1,5 +1,5 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 {% set sha256 = "0b5f71b54ce25283a2295900e9d902bca3c135c2520ec7891b2b52c1766a60ba" %}
 
 package:
@@ -22,7 +22,6 @@ requirements:
   host:
     - cffi
     - liknorm >=1.5.1
-    - numpy
     - pip
     - pytest-runner
     - python
