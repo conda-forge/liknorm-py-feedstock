@@ -1,4 +1,5 @@
 {% set name = "liknorm-py" %}
+{% set variant = "openblas" %}
 {% set version = "1.2.2" %}
 {% set sha256 = "6099eb01d394cbdc09af1b5a6b9817074c58341ce7c0cda1074ae5813f574bfc" %}
 
@@ -15,12 +16,15 @@ build:
   number: 0
   skip: True  # [py27]
   script: python -m pip install --no-deps --ignore-installed .
+  features:
+    - blas_{{ variant }}
 
 requirements:
   build:
     - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('c') }}
   host:
+    - blas 1.1 {{ variant }}
     - cffi
     - liknorm >=1.5.1
     - openblas
@@ -29,6 +33,7 @@ requirements:
     - python
     - setuptools
   run:
+    - blas 1.1 {{ variant }}
     - cffi
     - liknorm >=1.5.1
     - openblas
