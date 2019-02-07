@@ -42,15 +42,10 @@ requirements:
     - {{ pin_compatible('numpy') }}
 
 test:
-  requires:
-    - pytest
-    - numpy
   imports:
     - liknorm
-    - numpy
   commands:
-    - "{{ PYTHON }} -c 'import numpy'"
-    - "{{ PYTHON }} -c 'import sys; import liknorm; sys.exit(liknorm.test())'"
+    - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
 
 about:
   home: https://github.com/limix/liknorm-py
