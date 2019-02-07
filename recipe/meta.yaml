@@ -28,10 +28,10 @@ requirements:
     - setuptools
   run:
     - cffi
-    - liknorm
-    - numpy
+    - liknorm >=1.5.1
     - pytest
     - python
+    - {{ pin_compatible('numpy') }}
 
 test:
   requires:
