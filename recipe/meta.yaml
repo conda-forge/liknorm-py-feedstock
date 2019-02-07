@@ -47,6 +47,7 @@ test:
     - numpy
   imports:
     - liknorm
+    - numpy
   commands:
     - python -c "import numpy"
     - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
