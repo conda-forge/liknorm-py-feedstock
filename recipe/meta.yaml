@@ -22,11 +22,12 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
   host:
     - blas 1.1 {{ variant }}    # [not win]
     - cffi
     - liknorm >=1.5.1
-    - numpy
+    - numpy >=1.15.4
     - openblas                  # [not win]
     - pip
     - pytest-runner
