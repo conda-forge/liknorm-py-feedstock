@@ -13,30 +13,30 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [py27]
   script: python -m pip install --no-deps --ignore-installed .
   features:
-    - blas_{{ variant }}
+    - blas_{{ variant }}  # [not win]
 
 requirements:
   build:
     - {{ compiler('fortran') }}  # [unix]
     - {{ compiler('c') }}
   host:
-    - blas 1.1 {{ variant }}
+    - blas 1.1 {{ variant }}    # [not win]
     - cffi
     - liknorm >=1.5.1
-    - openblas
+    - openblas                  # [not win]
     - pip
     - pytest-runner
     - python
     - setuptools
   run:
-    - blas 1.1 {{ variant }}
+    - blas 1.1 {{ variant }}    # [not win]
     - cffi
     - liknorm >=1.5.1
-    - openblas
+    - openblas                  # [not win]
     - pytest
     - python
     - {{ pin_compatible('numpy') }}
@@ -48,6 +48,7 @@ test:
   imports:
     - liknorm
   commands:
+    - python -c "import numpy"
     - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
 
 about:
