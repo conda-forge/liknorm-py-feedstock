@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "6099eb01d394cbdc09af1b5a6b9817074c58341ce7c0cda1074ae5813f574bfc" %}
+{% set version = "1.2.3" %}
+{% set sha256 = "124bae3fe253b3c951ddc89af2067e63a5be9d5afa45181eb95a64a1a59effae" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 0
   skip: True  # [py27]
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
 
