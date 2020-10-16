@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "6099eb01d394cbdc09af1b5a6b9817074c58341ce7c0cda1074ae5813f574bfc" %}
+{% set version = "1.2.4" %}
+{% set sha256 = "182fd83065df4ce76924d51de70de1d10587a095c18813dfcb176e7eafbd8ff1" %}
 
 package:
   name: {{ name|lower }}
@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  skip: True  # [py27]
-  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed ."
+  number: 0
+  skip: true  # [py27]
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
@@ -45,7 +45,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
-  summary: 'Liknorm Python wrapper'
+  summary: Liknorm Python wrapper
   doc_url: https://github.com/limix/liknorm-py
   dev_url: https://github.com/limix/liknorm-py
 
