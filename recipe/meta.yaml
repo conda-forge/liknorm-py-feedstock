@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.2.4" %}
-{% set sha256 = "182fd83065df4ce76924d51de70de1d10587a095c18813dfcb176e7eafbd8ff1" %}
+{% set version = "1.2.6" %}
+{% set sha256 = "f119b6439ff75adb6c5a1df8ff9a69526fd8bd9c00b4ccbbce3b8b65dfd1f77a" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py27]
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
@@ -21,24 +21,23 @@ requirements:
     - {{ compiler('c') }}
   host:
     - cffi
-    - libgfortran =3  # [not win]
-    - liknorm >=1.5.1
-    - numpy
+    - liknorm >=1.5.6
     - pip
-    - pytest-runner
     - python
     - setuptools
   run:
     - cffi
-    - libgfortran =3  # [not win]
-    - liknorm >=1.5.1
-    - numpy
-    - pytest
+    - liknorm >=1.5.6
     - python
 
 test:
   imports:
     - liknorm
+  requires:
+    - pytest
+    - numpy
+  commands:
+    - python -c "import sys; import liknorm; sys.exit(liknorm.test())"
 
 about:
   home: https://github.com/limix/liknorm-py
