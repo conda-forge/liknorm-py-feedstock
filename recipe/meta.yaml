@@ -1,6 +1,6 @@
 {% set name = "liknorm-py" %}
-{% set version = "1.2.6" %}
-{% set sha256 = "f119b6439ff75adb6c5a1df8ff9a69526fd8bd9c00b4ccbbce3b8b65dfd1f77a" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "4bde18cb4f536a03163046df8ab7e55e8a06dc565f9711a431506106d8638879" %}
 
 package:
   name: {{ name|lower }}
@@ -8,16 +8,17 @@ package:
 
 source:
   fn: liknorm-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/liknorm/liknorm-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/liknorm/liknorm-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cffi
     - liknorm >=1.5.6
