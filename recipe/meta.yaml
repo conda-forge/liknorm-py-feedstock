@@ -8,16 +8,17 @@ package:
 
 source:
   fn: liknorm-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/liknorm/liknorm-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/liknorm/liknorm-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - cffi
     - liknorm >=1.5.6
